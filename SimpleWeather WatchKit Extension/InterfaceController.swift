@@ -12,6 +12,7 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var imageWeather: WKInterfaceImage!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -28,4 +29,16 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func odsiewzPogode() {
+        
+        let data = NSData(contentsOfURL: NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=Krakow,pl")!)
+        
+        do {
+            let calaPrognoza = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments).valueForKey("weather")
+            let pogoda = calaPrognoza?.valueForKey("main") as! String
+            print(pogoda)
+        } catch {
+            print(error)
+        }
+    }
 }
