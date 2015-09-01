@@ -730,6 +730,7 @@
 				034895901B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		034895921B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeather WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +739,7 @@
 				034895941B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		034895961B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeather" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +748,7 @@
 				034895981B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		034895991B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +757,7 @@
 				0348959B1B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0348959C1B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -762,6 +766,7 @@
 				0348959E1B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
