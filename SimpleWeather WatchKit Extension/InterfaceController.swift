@@ -8,34 +8,59 @@
 
 import WatchKit
 import Foundation
+import CoreLocation
 
 
-class InterfaceController: WKInterfaceController, NSURLSessionDelegate {
+class InterfaceController: WKInterfaceController, NSURLSessionDelegate, CLLocationManagerDelegate {
 
     @IBOutlet var imageWeather: WKInterfaceImage!
     @IBOutlet var opisPogody: WKInterfaceLabel!
     @IBOutlet var temperaturaLabel: WKInterfaceLabel!
+    @IBOutlet var latitudeLabel: WKInterfaceLabel!
+    @IBOutlet var longitudeLabel: WKInterfaceLabel!
     
     var session: NSURLSession?
+    var locationManager = CLLocationManager()
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        sprawdzaniePogody()
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.requestWhenInUseAuthorization()
+        sprawdzaniePogody()
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location_now: CLLocation = locations.last!
+        latitudeLabel.setText(String(format: "%f", location_now.coordinate.latitude))
+        longitudeLabel.setText(String(format: "%f", location_now.coordinate.longitude))
+        print(location_now.coordinate.latitude)
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
+    }
+    
+    func sprawdzanieLokalizacji() {
+        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse {
+            self.locationManager.requestLocation()
+        }
+    }
+    
     func sprawdzaniePogody() {
+        
         var calaPrognoza: AnyObject?
         let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         session = NSURLSession(configuration: sessionConfig)
@@ -74,6 +99,7 @@ class InterfaceController: WKInterfaceController, NSURLSessionDelegate {
     
 
     @IBAction func odsiewzPogode() {
+        sprawdzanieLokalizacji()
         sprawdzaniePogody()
     }
 }

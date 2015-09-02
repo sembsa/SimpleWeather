@@ -8,7 +8,7 @@
         <!--Pogoda-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Pogoda" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleWeather_WatchKit_App" customModuleProvider="target">
+                <controller title="Pogoda" alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleWeather_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="133" height="27.5" alignment="left" text="Kraków" textAlignment="center" numberOfLines="2" id="u3m-Et-8BV">
                             <fontDescription key="font" type="system" pointSize="21"/>
@@ -31,9 +31,17 @@
                                 <action selector="odsiewzPogode" destination="AgC-eL-Hgc" id="5RN-aX-bOF"/>
                             </connections>
                         </button>
+                        <label alignment="left" text="Label" id="o41-5A-QX1"/>
+                        <label alignment="left" text="Label" id="aWY-Rk-LnV"/>
+                        <label alignment="center" text="Ostatnia aktualizacja:" id="6rL-To-Hwq">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="center" text="0/0/0/0" id="gUI-hn-LjJ"/>
                     </items>
                     <connections>
                         <outlet property="imageWeather" destination="cny-qc-L94" id="kGJ-du-VXM"/>
+                        <outlet property="latitudeLabel" destination="o41-5A-QX1" id="sAH-Rr-oGC"/>
+                        <outlet property="longitudeLabel" destination="aWY-Rk-LnV" id="uWp-2F-reh"/>
                         <outlet property="opisPogody" destination="JhZ-Bj-01A" id="ujf-7R-Hbb"/>
                         <outlet property="temperaturaLabel" destination="fEj-og-Ca0" id="2tP-wM-ySQ"/>
                     </connections>
