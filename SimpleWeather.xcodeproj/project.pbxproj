@@ -22,6 +22,8 @@
 		034895861B8F711B00F43F05 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034895851B8F711B00F43F05 /* ExtensionDelegate.swift */; };
 		034895881B8F711B00F43F05 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034895871B8F711B00F43F05 /* NotificationController.swift */; };
 		0348958A1B8F711B00F43F05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034895891B8F711B00F43F05 /* Assets.xcassets */; };
+		038A6A631B95C429004B450A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034895751B8F711B00F43F05 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		03E7C4F21B971A9C00C4B60D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E7C4F11B971A9C00C4B60D /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,7 @@
 		034895871B8F711B00F43F05 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		034895891B8F711B00F43F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0348958B1B8F711B00F43F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E7C4F11B971A9C00C4B60D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E7C4F21B971A9C00C4B60D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +146,7 @@
 		0348953C1B8F711A00F43F05 = {
 			isa = PBXGroup;
 			children = (
+				03E7C4F11B971A9C00C4B60D /* CoreLocation.framework */,
 				034895471B8F711A00F43F05 /* SimpleWeather */,
 				0348955C1B8F711B00F43F05 /* SimpleWeatherTests */,
 				034895671B8F711B00F43F05 /* SimpleWeatherUITests */,
@@ -405,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038A6A631B95C429004B450A /* Assets.xcassets in Resources */,
 				0348958A1B8F711B00F43F05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,6 +736,7 @@
 				034895901B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		034895921B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeather WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +745,7 @@
 				034895941B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		034895961B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeather" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +754,7 @@
 				034895981B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		034895991B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +763,7 @@
 				0348959B1B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0348959C1B8F711B00F43F05 /* Build configuration list for PBXNativeTarget "SimpleWeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -762,6 +772,7 @@
 				0348959E1B8F711B00F43F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
