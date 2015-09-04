@@ -10,16 +10,16 @@
             <objects>
                 <controller title="Pogoda" alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleWeather_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="133" height="27.5" alignment="left" text="Kraków" textAlignment="center" numberOfLines="2" id="u3m-Et-8BV">
-                            <fontDescription key="font" type="system" pointSize="21"/>
+                        <label width="1" alignment="left" text="Miasto" textAlignment="center" baselineAdjustment="alignCenters" minimumScaleFactor="0.5" id="u3m-Et-8BV">
+                            <fontDescription key="font" type="system" pointSize="27"/>
                         </label>
                         <imageView width="80" height="80" alignment="center" contentMode="scaleAspectFit" id="cny-qc-L94"/>
                         <group height="32.5" alignment="right" id="Sku-W0-LHc">
                             <items>
                                 <label alignment="right" text="0" textAlignment="right" minimumScaleFactor="0.80000000000000004" id="fEj-og-Ca0">
-                                    <fontDescription key="font" type="system" pointSize="29"/>
+                                    <fontDescription key="font" type="system" pointSize="30"/>
                                 </label>
-                                <label alignment="right" text="℃" id="x62-yy-BVa"/>
+                                <label alignment="right" text="℃" baselineAdjustment="alignCenters" id="x62-yy-BVa"/>
                             </items>
                         </group>
                         <label width="136" height="31.5" alignment="left" text="Opis" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.40000000000000002" id="JhZ-Bj-01A">
@@ -31,17 +31,17 @@
                                 <action selector="odsiewzPogode" destination="AgC-eL-Hgc" id="5RN-aX-bOF"/>
                             </connections>
                         </button>
-                        <label alignment="left" text="Label" id="o41-5A-QX1"/>
-                        <label alignment="left" text="Label" id="aWY-Rk-LnV"/>
                         <label alignment="center" text="Ostatnia aktualizacja:" id="6rL-To-Hwq">
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
-                        <label alignment="center" text="0/0/0/0" id="gUI-hn-LjJ"/>
+                        <label alignment="center" text="yyyy-MM-dd HH:mm" minimumScaleFactor="0.69999999999999996" id="gUI-hn-LjJ">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
                     </items>
                     <connections>
+                        <outlet property="dataLabel" destination="gUI-hn-LjJ" id="BFt-eQ-JH0"/>
                         <outlet property="imageWeather" destination="cny-qc-L94" id="kGJ-du-VXM"/>
-                        <outlet property="latitudeLabel" destination="o41-5A-QX1" id="sAH-Rr-oGC"/>
-                        <outlet property="longitudeLabel" destination="aWY-Rk-LnV" id="uWp-2F-reh"/>
+                        <outlet property="miastoLabel" destination="u3m-Et-8BV" id="ddj-Ce-DqS"/>
                         <outlet property="opisPogody" destination="JhZ-Bj-01A" id="ujf-7R-Hbb"/>
                         <outlet property="temperaturaLabel" destination="fEj-og-Ca0" id="2tP-wM-ySQ"/>
                     </connections>
